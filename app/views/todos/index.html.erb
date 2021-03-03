@@ -1,0 +1,20 @@
+ <div class="main_div">
+    <section>
+      <h1 class="todo_heading">My To-do List</h1>
+      <div>
+        <form action="">
+          <input class="input_text" type="text" name="" placeholder="What's next?" id="">
+          <input class="input_date" type="date" type="text" onfocus="(this.type='date')" id="date">
+          <input type=" button" value="Add" class="form_btn">
+        </form>
+      </div>
+    </section>
+
+
+
+    <section>
+<%= render partial:"todos_section", locals:{type:"Overdue",todo:Todo.overdue.notcompleted,show_date:true}%>
+<%= render partial:"todos_section", locals:{type:"Today",todo:Todo.do_today,show_date:false}%>
+<%= render partial:"todos_section", locals:{type:"Later",todo:Todo.do_later,show_date:true}%>
+    </section>
+  </div>

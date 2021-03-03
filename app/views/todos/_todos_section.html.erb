@@ -1,0 +1,17 @@
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+ <section>
+ <div class="each_list">
+        <h2 class="due_type"><%= type%></h2>
+        <p class="list_count"><%=todo.completed?.count%>/<%=todo.count%></p></div>
+        <ul>
+        <% todo.all.each do |todos|%>
+          <div class="list" ><input type="checkbox" class="checkbox" name="" id="myCheck">
+            <p class="text"><%=todos.todo_text%></p>
+            <% if show_date%>
+            <p class="due_date"><%= todos.due_date.to_s(:short)%></p>
+            <%end%>
+            <p class="bin_icon"><i class="fa fa-trash-o"></i></p>
+          </div>
+          <%end%>
+        </ul>
+      </section>

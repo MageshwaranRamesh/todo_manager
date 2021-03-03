@@ -1,0 +1,133 @@
+
+.main_div{
+  margin: auto;
+  width: 26%;
+}
+.todo_heading{
+  color: rgba(69,60,82,1);
+font-size: 40px;
+}
+section{
+  padding: 7px;
+}
+
+.due_type{
+  font-family: OpenSans-Semibold;
+  color: #453C52;
+  letter-spacing: 0.1px;
+}
+.each_list{
+  display:flex;
+  align-items:center;
+}
+.list_count{
+  margin-left:10px;
+}
+.due_date{
+  font-family: OpenSans;
+  color: #453C52;
+  letter-spacing: 0.1px;
+  padding: 5px;
+}
+.input_text{
+  width: 190px;
+  height: 32px;
+  border-radius: 4px;
+  text-align: left;
+  background: #FFFFFF;
+  border: 1px solid #BFB8CC;}
+
+.date{
+  font-family: OpenSans;
+color: #726A7E;
+letter-spacing: 0.09px;
+}
+.checkbox{
+  font-family: OpenSans;
+  color: #453C52;
+  letter-spacing: 0.1px;
+  padding: 5px;
+  height: 18px;
+  width: 18px;
+  margin-top: 5.5px;
+}
+.overdue{
+  font-family: OpenSans;
+  color: #C53030;
+  letter-spacing: 0.09px;
+}
+.delete{
+  background: #F1EDF7;
+border-radius: 4px;
+border-radius: 4px;
+width: auto;
+}
+i{
+  width: 8.6px;
+  height: 12.2;
+  color:rgba(69,60,82,1) ;
+}
+
+.list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.bin_icon{
+  display: none;
+  margin-left: 10px;
+}
+.list{
+  background-color: transparent;
+}
+.list:hover  .bin_icon{
+  display:block;
+}
+.list:hover{
+  background-color: thistle;
+}
+
+
+
+input[type=checkbox]:checked + p.text{
+  text-decoration: line-through;
+}
+
+.input_date
+{
+  width: 93px;
+  height: 32px;
+  border-radius: 4px;
+  text-align: right;
+  background: #FFFFFF;
+
+  border: 1px solid #BFB8CC;}
+.form_btn
+{
+  background-color: rgba(72,187,120,1);
+  color:rgba(255,255,255,1) ;
+  font-family: OpenSans-Semibold;
+  font-size: 14px;
+  width: 72px;
+  height: 32px;
+  border-radius: 4px;
+border-width: 0ch;
+text-align: center;
+}
+
+input[type="date"]::before{
+  color: #ffffff;
+  content: attr(placeholder) ": ";
+}
+input[type="date"]:focus::before {
+  content: "" !important;
+}
+.delete{
+  width: 50%;
+  background-color: #BFB8CC 100%;
+
+
+}
+.text{
+ margin-left: 10px;
+}
