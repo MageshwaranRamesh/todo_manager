@@ -10,7 +10,7 @@
            <% if(todos.completed==false)%>
            <%=form_with(url:"/todos/#{todos.id}",method:"put",class:"checkform") do%>
         <input type="checkbox"   class="checkbox" name="check" value="1" id="myCheck">
-         <input class="bin_icon" type="image" src="/assets/binig.png" alt="img">
+         <input class="bin_icon" type="image" src="binig.png" alt="img">
         <p class="text"><%=todos.todo_text%></p>
         <%end%>
 
@@ -21,7 +21,7 @@
           <%=form_with(url:"/todos/#{todos.id}",method:"put",class:"checkform") do%>
         <input type="checkbox" checked  class="checkbox" name="check" value="1" id="myCheck">
         <p class="text"><%=todos.todo_text%></p>
-        <input class="bin_icon" type="image" src="/assets/binig.png" alt="img">
+        <input class="bin_icon" type="image" src="binig.png" alt="img">
 
         <%end%>
            <%end%>
@@ -29,7 +29,7 @@
 
             <p class="bin_icon">
             <%=form_with(url:"/todos/#{todos.id}",method:"delete") do%>
-            <input class="bin_icon" type="image" src="/assets/binig.png" alt="img">
+            <input class="bin_icon" type="image" src="binig.png" alt="img">
             <%end%>
             </p>
           </div>
