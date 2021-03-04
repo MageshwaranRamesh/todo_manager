@@ -73,7 +73,11 @@ i{
   flex-direction: row;
   align-items: center;
 }
+
+
 .bin_icon{
+  width: 20px;
+  height: 20px;
   display: none;
   margin-left: 10px;
 }
@@ -92,7 +96,11 @@ i{
 input[type=checkbox]:checked + p.text{
   text-decoration: line-through;
 }
-
+.checkform{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
 .input_date
 {
   width: 93px;
@@ -115,13 +123,7 @@ border-width: 0ch;
 text-align: center;
 }
 
-input[type="date"]::before{
-  color: #ffffff;
-  content: attr(placeholder) ": ";
-}
-input[type="date"]:focus::before {
-  content: "" !important;
-}
+
 .delete{
   width: 50%;
   background-color: #BFB8CC 100%;

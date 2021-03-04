@@ -16,6 +16,14 @@ class Todo < ActiveRecord::Base
   def self.completed?
     all.where("completed = ?", true)
   end
+  def self.singlecompletd?
+    if (completed == true)
+      return true
+    else
+      return false
+    end
+  end
+
   def self.notcompleted
     all.where("completed = ?", false)
   end

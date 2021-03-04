@@ -5,12 +5,33 @@
         <p class="list_count"><%=todo.completed?.count%>/<%=todo.count%></p></div>
         <ul>
         <% todo.all.each do |todos|%>
-          <div class="list" ><input type="checkbox" class="checkbox" name="" id="myCheck">
-            <p class="text"><%=todos.todo_text%></p>
-            <% if show_date%>
+          <div class="list" >
+
+           <% if(todos.completed==false)%>
+           <%=form_with(url:"/todos/#{todos.id}",method:"put",class:"checkform") do%>
+        <input type="checkbox"   class="checkbox" name="check" value="1" id="myCheck">
+         <input class="bin_icon" type="image" src="/assets/binig.png" alt="img">
+        <p class="text"><%=todos.todo_text%></p>
+        <%end%>
+
+           <%end%>
+
+
+          <% if(todos.completed==true)%>
+          <%=form_with(url:"/todos/#{todos.id}",method:"put",class:"checkform") do%>
+        <input type="checkbox" checked  class="checkbox" name="check" value="1" id="myCheck">
+        <p class="text"><%=todos.todo_text%></p>
+        <input class="bin_icon" type="image" src="/assets/binig.png" alt="img">
+
+        <%end%>
+           <%end%>
             <p class="due_date"><%= todos.due_date.to_s(:short)%></p>
+
+            <p class="bin_icon">
+            <%=form_with(url:"/todos/#{todos.id}",method:"delete") do%>
+            <input class="bin_icon" type="image" src="/assets/binig.png" alt="img">
             <%end%>
-            <p class="bin_icon"><i class="fa fa-trash-o"></i></p>
+            </p>
           </div>
           <%end%>
         </ul>

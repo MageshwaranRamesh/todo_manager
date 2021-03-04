@@ -2,11 +2,11 @@
     <section>
       <h1 class="todo_heading">My To-do List</h1>
       <div>
-        <form action="">
-          <input class="input_text" type="text" name="" placeholder="What's next?" id="">
-          <input class="input_date" type="date" type="text" onfocus="(this.type='date')" id="date">
-          <input type=" button" value="Add" class="form_btn">
-        </form>
+        <%= form_with(url:"/todos",method:"post") do %>
+          <input class="input_text" type="text" name="todo_text" placeholder="What's next?" id="">
+          <input class="input_date" type="date" name="due_date1" value="" id="date">
+          <input type="submit" value="Add" class="form_btn">
+        <%end%>
       </div>
     </section>
 
