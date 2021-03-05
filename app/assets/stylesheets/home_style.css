@@ -1,0 +1,23 @@
+.home_main{
+margin: auto;
+width: 30%;
+padding: 30px;
+}
+.heading ,h3{
+color: rgb(126, 131, 134);
+font-size: large;
+font-family: sans-serif;
+font-weight: lighter;
+}
+.choice{
+  margin-top: 40px;
+}
+.command{
+  margin-top: 40px;
+
+  font-size: large;
+}
+.signup{
+  margin-bottom: 40px;
+
+}
