@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def new
-    render "users/index"
+    render "users/signup"
   end
 
   def adduser

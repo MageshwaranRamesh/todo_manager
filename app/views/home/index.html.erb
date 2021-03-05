@@ -19,11 +19,12 @@
 <p class="signup_heading">
 New to the Todo_Manager?
 </p>
-<a href="/user/new" class="signuplink">Sign-up for a new account</a>
+<%= link_to "Sign-up for a new account", new_user_path, class:"signuplink" %>
 </div>
 <div class="signin">
 <p class="signin_heading">Already have account?</p>
-<a href="" class="signinlink">Sign-in</a>
+<%= link_to "Sign-in", new_session_path, class:"signinlink" %>
+
 </div>
 </div>
   </div>
