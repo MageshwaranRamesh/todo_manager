@@ -11,10 +11,10 @@
 
   <body>
   <% if @current_user%>
-<div class="welcome_head">
-<h2 class="welcome_tag">Welcome</h2>
-<h2 class="welcome_tag"><%= @current_user.first_Name%></h2>
-</div>
+
+<p class="welcome_tag">Welcome  <%= @current_user.first_Name%>
+<%=link_to "sign-out" ,session_destroy_path ,method:"delete"%>
+</p>
 <%end%>
     <%= yield %>
   </body>

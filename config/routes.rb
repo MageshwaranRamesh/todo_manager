@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get "/new_session", to: "sessions#new"
   post "/users", to: "users#adduser"
   post "/new_session", to: "sessions#create"
+  delete "/signout", to: "sessions#destroy", as: :session_destroy
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
