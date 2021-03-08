@@ -15,11 +15,9 @@
  */
 
  .welcome_tag{
-  margin: auto;
-  width: 25%;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(163, 159, 159);
+  background-color: rgb(243 243 243);
   padding: 5px;
  }
  .error_msg{
@@ -27,4 +25,10 @@
   width: 25%;
    color: darkred;
 margin-bottom: 20px;
+ }
+ .app_outbox{
+position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
  }

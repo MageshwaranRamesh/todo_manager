@@ -10,6 +10,7 @@
   </head>
 
   <body>
+  <div class="app_outbox">
   <% if @current_user%>
 
 <p class="welcome_tag">Welcome  <%= @current_user.first_Name%>
@@ -18,6 +19,9 @@
 <%end%>
 <% if flash[:error]%>
 <p class="error_msg"><%= flash[:error]%></p>
-<%end%>    <%= yield %>
+<%end%>
+
+ <%= yield %>
+ </div>
   </body>
 </html>
