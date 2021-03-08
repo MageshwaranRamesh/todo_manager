@@ -16,6 +16,8 @@
 <%=link_to "sign-out" ,session_destroy_path ,method:"delete"%>
 </p>
 <%end%>
-    <%= yield %>
+<% if flash[:error]%>
+<p class="error_msg"><%= flash[:error]%></p>
+<%end%>    <%= yield %>
   </body>
 </html>

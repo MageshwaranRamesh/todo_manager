@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
       session[:current_user_id] = user.id
       redirect_to "/todos"
     else
-      render "users/signin", local { status :"Incorect password" }
+      flash[:error] = "Invalid user name and password! "
+      redirect_to new_session_path
     end
   end
 
