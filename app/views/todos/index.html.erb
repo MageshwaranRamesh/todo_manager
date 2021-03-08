@@ -13,8 +13,8 @@
 
 
     <section>
-<%= render partial:"todos_section", locals:{type:"Overdue",todo:Todo.overdue.notcompleted,show_date:true}%>
-<%= render partial:"todos_section", locals:{type:"Today",todo:Todo.do_today,show_date:false}%>
-<%= render partial:"todos_section", locals:{type:"Later",todo:Todo.do_later,show_date:true}%>
+<%= render partial:"todos_section", locals:{type:"Overdue",todo:@todo.overdue.notcompleted,show_date:true}%>
+<%= render partial:"todos_section", locals:{type:"Today",todo:@todo.do_today,show_date:false}%>
+<%= render partial:"todos_section", locals:{type:"Later",todo:@todo.do_later,show_date:true}%>
     </section>
   </div>

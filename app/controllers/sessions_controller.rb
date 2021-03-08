@@ -9,9 +9,9 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:current_user_id] = user.id
-      render plain: "corret password"
+      redirect_to "/todos"
     else
-      render plain: "Incorrect password"
+      render "users/signin", local { status :"Incorect password" }
     end
   end
 

@@ -2,13 +2,14 @@ class TodosController < ApplicationController
   # skip_before_action :verify_authenticity_token
 
   def index
+    @todo = Todo.of_user(current_user)
     render "index"
     # render plain: Todo.order(:due_date).all.map { |todo| todo.to_pleasentString }.join("\n")
   end
 
   def show
     id = params[:id]
-    todo = Todo.find(id)
+    todo = Todo.of_user(current_user).find(id)
     render plain: todo.to_pleasentString
   end
 
@@ -19,13 +20,14 @@ class TodosController < ApplicationController
       todo_text: todo_text,
       due_date: due_date,
       completed: false,
+      user_id: current_user.id,
     )
     redirect_to todos_path
   end
 
   def updatechecked
     id = params[:id]
-    todo = Todo.find(id)
+    todo = Todo.of_user(current_user).find(id)
     if todo.completed == false
       todo.update!(completed: true)
     else
@@ -36,7 +38,7 @@ class TodosController < ApplicationController
 
   def delete
     id = params[:id]
-    todo = Todo.find(id)
+    todo = Todo.of_user(current_user).find(id)
     todo.destroy
     redirect_to todos_path
   end
