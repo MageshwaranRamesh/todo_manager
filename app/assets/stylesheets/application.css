@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+ .welcome_head{
+  margin: auto;
+  width: 25%;
+  display: flex;
+  background-color: rgb(163, 159, 159);
+ }
+.welcome_tag{
+  margin: 10px;
+}
